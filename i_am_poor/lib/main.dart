@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Teste'),
-          backgroundColor: Colors.blueGrey[900],
+          title: Text("Iam Poor"),
+          backgroundColor: Colors.red,
         ),
         body: Center(
           child: Image(
-            image: AssetImage('Images/diamondBlank.png'),
+            image: NetworkImage(
+                'https://cdn.gatry.com/gatry-static/promocao/imagem/b36c730d7df1326b433eff514c718439.jpg'),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 
